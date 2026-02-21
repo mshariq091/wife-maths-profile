@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mrs. Aysha Firoz - Mathematics Teacher</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root{
+            --bg-1: #eaf6ff;
+            --bg-2: #f7f4ff;
+            --accent: #2c3e50;
+            --muted: #6b7280;
+            --card-shadow: rgba(29,33,43,0.12);
+        }
+
+        *{box-sizing:border-box}
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+            padding: 32px;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 520px;
+            background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px var(--card-shadow);
+            display: block;
+            transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
+            overflow: hidden;
+        }
+
+        .card:hover{
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(29,33,43,0.18);
+        }
+
+        .profile {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            background: linear-gradient(135deg,#2c3e50,#4b6cb7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(44,62,80,0.12);
+            flex-shrink: 0;
+        }
+
+        h1 {
+            margin: 0 0 4px 0;
+            font-size: 20px;
+            color: var(--accent);
+        }
+
+        h3 {
+            margin: 0;
+            font-weight: 500;
+            color: #3f4b5a;
+            font-size: 14px;
+        }
+
+        .meta {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            color: var(--muted);
+            font-size: 14px;
+            align-items: center;
+        }
+
+        .meta .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(44,62,80,0.04);
+            padding: 8px 12px;
+            border-radius: 999px;
+        }
+
+        .about {
+            margin-top: 18px;
+            color: #374151;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .contact-row {
+            margin-top: 18px;
+            display:flex;
+            gap:12px;
+            align-items:center;
+        }
+
+        .email {
+            color: #ffffff;
+            background: linear-gradient(90deg,#4b6cb7,#2c3e50);
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight:600;
+            box-shadow: 0 6px 18px rgba(75,108,183,0.18);
+            transition: transform .18s;
+        }
+
+        .email:hover { transform: translateY(-3px); }
+
+        .location {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width:480px){
+            .card { padding: 20px; border-radius: 12px; }
+            .avatar { width:64px; height:64px; font-size:22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="profile">
+            <div class="avatar" aria-hidden="true">AF</div>
+            <div>
+                <h1>Mrs. Aysha Firoz</h1>
+                <h3>Mathematics Teacher — Algebra & Calculus</h3>
+                <div class="meta">
+                    <div class="pill">📚 7+ Years Teaching Experience</div>
+                    <div class="pill">🏫 CBSE & Coaching</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <strong>About:</strong> She has 7 years of experience teaching at various institutions, including a personal coaching center and a CBSE school. Experienced in building strong fundamentals and preparing students for exams.
+        </div>
+
+        <div class="contact-row">
+            <a class="email" href="mailto:firozsisters@email.com">Email Mrs. Firoz</a>
+            <div class="location">📍 Delhi, India</div>
+        </div>
+    </div>
+</body>
+</html>
