@@ -1,162 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mrs. Aysha Firoz - Mathematics Teacher</title>
     <meta charset="UTF-8">
+    <title>Class 9 Maths Coaching for Girls | Mrs. Aysha Firoz | Jasola, Delhi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CBSE Class 9 Mathematics Coaching for Girls in Jasola Vihar, Delhi. Monday-Wednesday-Friday batches. Strong fundamentals, weekly tests & personal attention. Free demo class available.">
+
     <style>
         :root{
-            --bg-1: #eaf6ff;
-            --bg-2: #f7f4ff;
-            --accent: #2c3e50;
-            --muted: #6b7280;
-            --card-shadow: rgba(29,33,43,0.12);
+            --primary:#2c3e50;
+            --secondary:#4b6cb7;
+            --light:#f4f7ff;
+            --accent:#16a34a;
         }
 
-        *{box-sizing:border-box}
+        *{box-sizing:border-box;margin:0;padding:0}
 
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
-            padding: 32px;
-            -webkit-font-smoothing:antialiased;
+        body{
+            font-family:Segoe UI, Arial, sans-serif;
+            background:var(--light);
+            color:#333;
+            line-height:1.6;
         }
 
-        .card {
-            width: 100%;
-            max-width: 520px;
-            background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-            padding: 28px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px var(--card-shadow);
-            display: block;
-            transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
-            overflow: hidden;
+        header{
+            background:linear-gradient(135deg,var(--secondary),var(--primary));
+            color:#fff;
+            padding:60px 20px;
+            text-align:center;
         }
 
-        .card:hover{
-            transform: translateY(-8px);
-            box-shadow: 0 20px 45px rgba(29,33,43,0.18);
+        header h1{
+            font-size:30px;
+            margin-bottom:10px;
         }
 
-        .profile {
-            display: flex;
-            gap: 18px;
-            align-items: center;
+        header p{
+            font-size:18px;
+            margin-bottom:20px;
         }
 
-        .avatar {
-            width: 84px;
-            height: 84px;
-            border-radius: 50%;
-            background: linear-gradient(135deg,#2c3e50,#4b6cb7);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: 700;
-            box-shadow: 0 6px 18px rgba(44,62,80,0.12);
-            flex-shrink: 0;
+        .btn{
+            display:inline-block;
+            padding:12px 20px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            margin:8px;
+            transition:.3s;
         }
 
-        h1 {
-            margin: 0 0 4px 0;
-            font-size: 20px;
-            color: var(--accent);
+        .btn-primary{
+            background:#fff;
+            color:var(--primary);
         }
 
-        h3 {
-            margin: 0;
-            font-weight: 500;
-            color: #3f4b5a;
-            font-size: 14px;
+        .btn-whatsapp{
+            background:var(--accent);
+            color:#fff;
         }
 
-        .meta {
-            margin-top: 14px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px 18px;
-            color: var(--muted);
-            font-size: 14px;
-            align-items: center;
+        .btn:hover{opacity:.85}
+
+        section{
+            padding:50px 20px;
+            max-width:900px;
+            margin:auto;
         }
 
-        .meta .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(44,62,80,0.04);
-            padding: 8px 12px;
-            border-radius: 999px;
+        h2{
+            text-align:center;
+            margin-bottom:30px;
+            color:var(--primary);
         }
 
-        .about {
-            margin-top: 18px;
-            color: #374151;
-            line-height: 1.5;
-            font-size: 15px;
+        .card{
+            background:#fff;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom:20px;
         }
 
-        .contact-row {
-            margin-top: 18px;
-            display:flex;
-            gap:12px;
-            align-items:center;
+        .grid{
+            display:grid;
+            gap:20px;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
         }
 
-        .email {
-            color: #ffffff;
-            background: linear-gradient(90deg,#4b6cb7,#2c3e50);
-            padding: 10px 14px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight:600;
-            box-shadow: 0 6px 18px rgba(75,108,183,0.18);
-            transition: transform .18s;
+        .highlight{
+            font-weight:bold;
+            color:var(--secondary);
         }
 
-        .email:hover { transform: translateY(-3px); }
-
-        .location {
-            color: var(--muted);
-            font-size: 14px;
+        footer{
+            background:var(--primary);
+            color:#fff;
+            text-align:center;
+            padding:20px;
+            font-size:14px;
         }
 
-        @media (max-width:480px){
-            .card { padding: 20px; border-radius: 12px; }
-            .avatar { width:64px; height:64px; font-size:22px; }
+        iframe{
+            width:100%;
+            border-radius:12px;
+            margin-top:20px;
         }
     </style>
 </head>
+
 <body>
+
+<header>
+    <h1>CBSE Class 9 Maths Coaching (Girls Only)</h1>
+    <p>Monday • Wednesday • Friday | Small Batch | Strong Fundamentals</p>
+
+    <a href="https://wa.me/918800988984?text=Hello,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20Class%209%20Maths.%20Please%20share%20details."
+       target="_blank"
+       class="btn btn-primary">
+       Book Free Demo
+    </a>
+
+    <a href="https://wa.me/918800988984?text=Hello,%20I%20am%20interested%20in%20Class%209%20Maths%20coaching.%20Kindly%20share%20batch%20details."
+       target="_blank"
+       class="btn btn-whatsapp">
+       WhatsApp Enquiry
+    </a>
+
+    <p style="margin-top:15px;font-size:14px;">
+        🎯 Limited Seats – Maximum 10 Students Only
+    </p>
+</header>
+
+<section>
+    <h2>About Mrs. Aysha Firoz</h2>
     <div class="card">
-        <div class="profile">
-            <div class="avatar" aria-hidden="true">AF</div>
-            <div>
-                <h1>Mrs. Aysha Firoz</h1>
-                <h3>Mathematics Teacher — Algebra & Calculus</h3>
-                <div class="meta">
-                    <div class="pill">📚 7+ Years Teaching Experience</div>
-                    <div class="pill">🏫 CBSE & Coaching</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="about">
-            <strong>About:</strong> She has 7 years of experience teaching at various institutions, including a personal coaching center and a CBSE school. Experienced in building strong fundamentals and preparing students for exams.
-        </div>
-
-        <div class="contact-row">
-            <a class="email" href="mailto:firozsisters@email.com">Email Mrs. Firoz</a>
-            <div class="location">📍 Sector 7, Jasola Vihar, Delhi, India</div>
-        </div>
+        <p><span class="highlight">7+ Years Teaching Experience</span> in CBSE school and personal coaching.</p>
+        <p>Focused on building strong mathematical foundations in Algebra, Geometry and Number Systems.</p>
+        <p>Helping students gain confidence and improve academic performance.</p>
     </div>
+</section>
+
+<section>
+    <h2>Why Choose This Coaching?</h2>
+    <div class="grid">
+        <div class="card">✔ Small Batch Size (Max 8–10 Students)</div>
+        <div class="card">✔ Weekly Tests & Performance Tracking</div>
+        <div class="card">✔ Homework & Practice Worksheets</div>
+        <div class="card">✔ Personal Attention</div>
+        <div class="card">✔ Safe & Comfortable Environment for Girls</div>
+        <div class="card">✔ Regular Parent Updates</div>
+    </div>
+</section>
+
+<section>
+    <h2>Batch Details</h2>
+    <div class="card">
+        <p><strong>Class:</strong> 9 (CBSE)</p>
+        <p><strong>Days:</strong> Monday – Wednesday – Friday</p>
+        <p><strong>Timing:</strong> 5:00 PM – 6:00 PM</p>
+        <p><strong>Free Demo Class:</strong> Available on Request</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact & Location</h2>
+    <div class="card">
+        <p><strong>Location:</strong> Sector 7, Jasola Vihar, Delhi</p>
+        <p><strong>Email:</strong> firozsisters@email.com</p>
+        <p><strong>Call / WhatsApp:</strong> +91-8800988984</p>
+    </div>
+
+    <!-- Replace with real Google Maps embed link -->
+   <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.92307923175!2d77.29506627529732!3d28.542031675714284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce403290c2b61%3A0x7c5deb633448f022!2sSector%207%20Jasola%20Vihar%2C%20Pocket%207%2C%20Jasola%20Vihar%2C%20New%20Delhi%2C%20Delhi%20110025!5e0!3m2!1sen!2sin!4v1771754354824!5m2!1sen!2sin"
+    height="350"
+    style="border:0; width:100%; border-radius:12px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</section>
+
+<footer>
+    © 2026 Mrs. Aysha Firoz | Class 9 CBSE Maths Coaching | Sector 7 Jasola, Delhi
+</footer>
+
 </body>
 </html>
