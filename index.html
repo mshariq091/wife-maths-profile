@@ -266,4 +266,134 @@
 </footer>
 
 </body>
+
+<!-- Floating Chat Button -->
+<div id="chat-button" onclick="toggleChat()">💬</div>
+
+<!-- Chat Window -->
+<div id="chat-window">
+    <div id="chat-header">
+        Mrs. Aysha Firoz Coaching
+        <span onclick="toggleChat()" style="cursor:pointer;">✖</span>
+    </div>
+    <div id="chat-messages"></div>
+    <div id="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Ask something..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<style>
+#chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    background: #4b6cb7;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 9999;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#chat-header {
+    background: #2c3e50;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat-messages {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+#chat-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+}
+
+#chat-input-area button {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+function toggleChat() {
+    const chat = document.getElementById("chat-window");
+    chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+    const input = document.getElementById("chat-input");
+    const message = input.value.trim();
+    if (!message) return;
+
+    addMessage("You", message);
+    input.value = "";
+
+    const reply = getBotReply(message);
+    setTimeout(() => addMessage("Bot", reply), 500);
+}
+
+function addMessage(sender, text) {
+    const chatMessages = document.getElementById("chat-messages");
+    const messageDiv = document.createElement("div");
+    messageDiv.innerHTML = "<strong>" + sender + ":</strong> " + text;
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function getBotReply(message) {
+    message = message.toLowerCase();
+
+    if (message.includes("fees") || message.includes("price")) {
+        return "The monthly fee for Class 9 coaching is ₹3000. Please contact on WhatsApp for detailed information.";
+    }
+
+    if (message.includes("demo")) {
+        return "You can book a free demo class by clicking the 'Book Free Demo' button above.";
+    }
+
+    if (message.includes("timing")) {
+        return "Classes are held on Monday, Wednesday, and Friday from 5:00 PM to 6:00 PM.";
+    }
+
+    if (message.includes("location")) {
+        return "Coaching is located at Sector 7, Jasola Vihar, Delhi.";
+    }
+
+    return "Please contact us on WhatsApp for detailed information. 😊";
+}
+</script>
 </html>
